@@ -4,10 +4,14 @@
 #email{
     font-family:Arial, FontAwesome;
 }
-.signintext{
+#signintext{
     color: #D3D3D3;
     cursor: pointer;
 }
-.signintext:hover{
+#signintext:hover{
     color:black;
+}
+
+#sendemail{
+    display: none;
 }

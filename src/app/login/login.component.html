@@ -1,15 +1,18 @@
 <div class="form-group">
+  <p *ngIf="error" style="color:red">{{resultado}}</p>
+  <p *ngIf="!error" style="color:green">{{resultado}}</p>
   <label for="email">Email Address</label>
   <div class="input-group">
     <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-    <input type="email" class="form-control" id="email" placeholder="&#xf0e0; Email" />
+    <input type="email" class="form-control" id="email" placeholder="&#xf0e0; Email" [(ngModel)]="email" />
   </div>
 </div>
-<div class="form-group">
+<div class="form-group" id="hidepass">
   <label for="password">Password</label>
-  <input type="password" class="form-control" id="password" placeholder="&#xf084; Password" />
+  <input type="password" class="form-control" id="password" placeholder="&#xf084; Password" [(ngModel)]="password" />
 </div>
 <div class="caption">
-  <button class="btn btn-primary signin">Sign in</button>
-  <p class="signintext">Send me a sign in link to my inbox</p>
+  <button class="btn btn-info" id="sendemail" (click)="sendemail()">Send me an email</button>
+  <button class="btn btn-primary" id="signin" (click)="signin()">Sign in</button>
+  <p id="signintext" (click)="getemail()">Send me a sign in link to my inbox</p>
 </div>
