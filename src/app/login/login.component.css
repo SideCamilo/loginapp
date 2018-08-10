@@ -1,0 +1,13 @@
+#password{
+    font-family:Arial, FontAwesome;
+}
+#email{
+    font-family:Arial, FontAwesome;
+}
+.signintext{
+    color: #D3D3D3;
+    cursor: pointer;
+}
+.signintext:hover{
+    color:black;
+}
